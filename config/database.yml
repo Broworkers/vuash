@@ -81,11 +81,10 @@ test: &test
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#
+#
 production:
-  <<: *default
-  database: vuash_production
-  username: vuash
-  password: <%= ENV['VUASH_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 cucumber:
   <<: *test
