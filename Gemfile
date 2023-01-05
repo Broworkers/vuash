@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
-#ruby '2.5.1'
-ruby '2.6.0'
+ruby '2.7.5'
 
-#gem 'rails', '4.2.10'
-gem 'rails', '5.2.2'
+gem 'rails', '~> 7.0.3'
 gem 'pg'
 
 gem 'haml-rails'
@@ -35,5 +33,4 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'spring'
 end
