@@ -19,6 +19,9 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  username: postgres
+  password: password
+  host: db
   pool: 5
 
 development:
@@ -78,11 +81,10 @@ test: &test
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#
+#
 production:
-  <<: *default
-  database: vuash_production
-  username: vuash
-  password: <%= ENV['VUASH_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 cucumber:
   <<: *test
