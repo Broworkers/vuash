@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "vuash.apps.core",
+    "vuash.apps.core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <textarea name="raw-message" id="raw-message" cols="30" rows="10" autofocus></textarea>
+    <button type="submit">{% translate "Send" %}</button>
+  </form>
+{% endblock %}
